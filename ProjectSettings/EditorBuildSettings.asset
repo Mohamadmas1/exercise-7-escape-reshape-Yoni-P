@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/EscapeRoom.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 49a98129e57ecc943a4094345e2cdd9a,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a71867fcc9444f94e8a7030f80604ce3,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e423b8ab4aa74954d80b8a0072274b66,
