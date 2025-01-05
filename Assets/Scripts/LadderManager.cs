@@ -37,24 +37,8 @@ public class LadderManager : MonoBehaviour
 
     private void HandleLadderPlacement(XRSocketInteractor currentSocket, XRSocketInteractor nextSocket, SelectEnterEventArgs arg0)
     {
-        // Disable the current socket
-        // currentSocket.interactionLayers = LayerMask.GetMask("Nothing");
-        currentSocket.GetComponent<Collider>().enabled = false;
         
-        // Enable the next socket if available
-        if (nextSocket != null)
-            nextSocket.socketActive = true;
-
         var ladder = arg0.interactableObject.transform.gameObject;
-
-        // Disable physics and ensure the ladder stays in place
-        var rb = ladder.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.isKinematic = true;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
 
         // Align the ladder with the socket
         ladder.transform.position = currentSocket.attachTransform.position;
@@ -69,6 +53,23 @@ public class LadderManager : MonoBehaviour
         var climbInteractable = ladder.GetComponent<ClimbInteractable>();
         if (climbInteractable != null)
             climbInteractable.enabled = true;
+        
+        // Disable the current socket
+        currentSocket.socketActive = false;
+        
+        // Enable the next socket if available
+        if (nextSocket != null)
+            nextSocket.socketActive = true;
+
+
+        // Disable physics and ensure the ladder stays in place
+        var rb = ladder.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
 
         Debug.Log($"Ladder placed on {currentSocket.name}");
     }
