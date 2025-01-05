@@ -57,8 +57,8 @@ public class LadderManager : MonoBehaviour
         }
 
         // Align the ladder with the socket
-        ladder.transform.position = currentSocket.transform.position;
-        ladder.transform.rotation = currentSocket.transform.rotation;
+        ladder.transform.position = currentSocket.attachTransform.position;
+        ladder.transform.rotation = currentSocket.attachTransform.rotation;
 
         // Disable interaction layers for the ladder to prevent further grabbing
         var grabInteractable = ladder.GetComponent<XRGrabInteractable>();

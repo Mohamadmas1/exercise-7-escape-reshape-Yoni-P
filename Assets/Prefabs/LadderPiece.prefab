@@ -102,7 +102,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 16
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_ClimbTransform: {fileID: 1397784738768311475}
   m_FilterInteractionByDistance: 1
   m_MaxInteractionDistance: 0.1
+  m_ClimbAssistanceTeleportVolume: {fileID: 0}
   m_ClimbSettingsOverride:
     m_UseConstant: 0
     m_ConstantValue:
