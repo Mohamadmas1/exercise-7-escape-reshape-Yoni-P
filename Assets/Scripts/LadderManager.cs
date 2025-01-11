@@ -67,8 +67,6 @@ public class LadderManager : MonoBehaviour
         if (rb != null)
         {
             rb.isKinematic = true;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
         }
 
         Debug.Log($"Ladder placed on {currentSocket.name}");
