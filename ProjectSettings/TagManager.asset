@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mag
+  - Key
+  - LargeRock
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Gun
-  - 
+  - Player
   - 
   - 
   - 

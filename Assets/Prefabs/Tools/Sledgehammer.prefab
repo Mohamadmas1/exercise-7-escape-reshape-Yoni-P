@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2748185162442842572}
   - component: {fileID: 863567379922968556}
   - component: {fileID: 7520661769921794806}
+  - component: {fileID: 6878592986499661898}
   m_Layer: 0
   m_Name: Sledgehammer
   m_TagString: Untagged
@@ -28,15 +29,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018437454091329273}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -13.068, y: 0.19, z: -4.463}
-  m_LocalScale: {x: 2.02, y: 2.02, z: 23.566664}
+  m_LocalScale: {x: 4, y: 4, z: 46.666664}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8646142978884776444}
   - {fileID: 4716208269467308586}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &6630066439734268387
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018437454091329273}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -272,6 +273,28 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!64 &6878592986499661898
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018437454091329273}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1260627212524716408, guid: 92ff916e5f7f7164b9735e81b35c2cad, type: 3}
 --- !u!1 &6013512695144577972
 GameObject:
   m_ObjectHideFlags: 0

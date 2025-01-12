@@ -11,7 +11,7 @@ public class Throw : MonoBehaviour
 
     private void Update()
     {
-        if (!GetComponent<XRGrabInteractable>().isSelected) return;
+            if (!GetComponent<XRGrabInteractable>().isSelected) return;
 
         if (positionHistory.Count < historySize)
         {
