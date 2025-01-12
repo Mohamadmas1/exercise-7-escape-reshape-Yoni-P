@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EscapeRoom.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/EscapeRoom-Yoni NewAndImproved.unity
+    guid: 2e0464e6c954c744aa1f13a8e23090ac
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 85f3f08bb84a14f4c80f66fc840995df,
       type: 2}

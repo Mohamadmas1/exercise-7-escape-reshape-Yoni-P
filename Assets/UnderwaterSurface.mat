@@ -27,9 +27,9 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -115,7 +115,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_3E4E7F58: 2208.3
+    - Vector1_3E4E7F58: 2000
     - Vector1_5443DC82: 1
     - Vector1_810FF6ED: 1
     - Vector1_994EA204: 4.94
@@ -172,7 +172,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_2B7C42F7: {r: 90.50967, g: 84.95954, b: 84.95954, a: 0}
-    - Color_DB714CC1: {r: 0.2688679, g: 0.79159397, b: 1, a: 0}
+    - Color_DB714CC1: {r: 0.26886788, g: 0.79159397, b: 1, a: 0}
     - Vector4_47405F4E: {r: 1, g: 1, b: 0, a: 0}
     - Vector4_85FB229A: {r: 0.66, g: 0.1, b: 0.05, a: 0.05}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

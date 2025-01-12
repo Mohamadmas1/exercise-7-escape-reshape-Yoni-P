@@ -55,12 +55,13 @@ public class Key : MonoBehaviour
     {
         Debug.Log("Teleporting player to " + teleportTarget.position);
         blackScreen.alpha = 1.0f;
-        yield return new WaitForSeconds(1.0f);
-        blackScreen.alpha = 0.0f;
         var characterController = player.GetComponent<CharacterController>();
         characterController.enabled = false;
         player.transform.position = teleportTarget.position;
         characterController.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        blackScreen.alpha = 0.0f;
+        
         globalLight.SetActive(true);
     }
 }
