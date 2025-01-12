@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,11 +13,26 @@ public class CompinationLock : MonoBehaviour
     [SerializeField] private float animationSpeed = 10;
     private bool isLocked = true;
     [SerializeField] private Animator suitcaseAnimator;
+    [SerializeField] private TextMeshPro[] digitTexts; 
 
     public void OnActivate(int index) {
         if (!isLocked) return;
-        digits[index] = (digits[index] + 1) % 10;
+        var num = (digits[index] + 1) % 10;
+        digits[index] = num;
+        digitTexts[index].text = num.ToString();
+        FadeInAndOutText(index);
         Debug.Log("Digit " + index + " set to " + digits[index]);
+    }
+
+    private void FadeInAndOutText(int index)
+    {
+        var text = digitTexts[index];
+        
+        // kill any previous tweens
+        text.DOKill();
+        
+        text.alpha = 1;
+        text.DOFade(0, 0.5f).SetDelay(0.5f);
     }
 
     private void Update ()
