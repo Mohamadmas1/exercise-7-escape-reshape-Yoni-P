@@ -5,6 +5,8 @@ using UnityEngine;
 public class DestroyableWall : MonoBehaviour
 {
     public List<GameObject> damageStages;
+    [SerializeField] private MissionData gasHints;     
+
 
     public void ExplosionDamage()
     {
@@ -17,6 +19,10 @@ public class DestroyableWall : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            if (gasHints != null)
+            {
+                gasHints.Solved = true;
+            }
         }
     }
 }

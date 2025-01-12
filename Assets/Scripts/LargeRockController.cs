@@ -7,6 +7,8 @@ public class LargeRockController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private int life;
+    [SerializeField] private MissionData hammerHints;     
+
     
     private int hitProperty = Animator.StringToHash("Hit");
     private int lifeProperty = Animator.StringToHash("Life");
@@ -23,6 +25,13 @@ public class LargeRockController : MonoBehaviour
         if (!_canBeHit) return;
         
         life--;
+        if (life==0)
+        {
+            if (hammerHints != null)
+            {
+                hammerHints.Solved = true;
+            }
+        }
         animator.SetInteger(lifeProperty, life);
         animator.SetTrigger(hitProperty);
         

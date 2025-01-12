@@ -15,6 +15,7 @@ public class ChestLockController : MonoBehaviour
     [SerializeField] private Transform controllerTransform;
     
     [SerializeField] private XRBaseInteractable ladderInteractable;
+    [SerializeField] private MissionData chestHints;     
     
     private int openProperty = Animator.StringToHash("Open");
     private int closeProperty = Animator.StringToHash("Close");
@@ -106,6 +107,10 @@ public class ChestLockController : MonoBehaviour
                 socketInteractor.socketActive = false;
                 socketInteractor.GetOldestInteractableHovered().transform.GetComponent<XRBaseInteractable>().enabled = false;
                 ladderInteractable.enabled = true;
+                if (chestHints != null)
+                {
+                    chestHints.Solved = true;
+                }
             }
         }
         

@@ -13,7 +13,8 @@ public class CompinationLock : MonoBehaviour
     [SerializeField] private float animationSpeed = 10;
     private bool isLocked = true;
     [SerializeField] private Animator suitcaseAnimator;
-    [SerializeField] private TextMeshPro[] digitTexts; 
+    [SerializeField] private TextMeshPro[] digitTexts;
+    [SerializeField] private MissionData suitCaseHints;     
 
     public void OnActivate(int index) {
         if (!isLocked) return;
@@ -48,6 +49,10 @@ public class CompinationLock : MonoBehaviour
         {
             isLocked = false;
             suitcaseAnimator.SetTrigger("Open");
+            if (suitCaseHints != null)
+            {
+                suitCaseHints.Solved = true;
+            }
             Debug.Log("Lock is open!");
         }
     }
