@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -61,7 +62,7 @@ public class Key : MonoBehaviour
         teleportTarget.gameObject.SetActive(false);
         characterController.enabled = true;
         yield return new WaitForSeconds(1.0f);
-        blackScreen.alpha = 0.0f;
+        blackScreen.DOFade(0.0f, 1.0f);
         
         globalLight.SetActive(true);
     }
