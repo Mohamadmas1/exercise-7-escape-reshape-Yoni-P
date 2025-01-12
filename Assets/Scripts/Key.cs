@@ -58,6 +58,7 @@ public class Key : MonoBehaviour
         var characterController = player.GetComponent<CharacterController>();
         characterController.enabled = false;
         player.transform.position = teleportTarget.position;
+        teleportTarget.gameObject.SetActive(false);
         characterController.enabled = true;
         yield return new WaitForSeconds(1.0f);
         blackScreen.alpha = 0.0f;

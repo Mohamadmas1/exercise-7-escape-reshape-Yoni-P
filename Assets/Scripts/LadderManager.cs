@@ -67,8 +67,20 @@ public class LadderManager : MonoBehaviour
         if (rb != null)
         {
             rb.isKinematic = true;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         }
 
         Debug.Log($"Ladder placed on {currentSocket.name}");
+    }
+    
+    private void OnSocketDeactivated(SelectExitEventArgs arg0)
+    {
+        Debug.Log("Socket deactivated");
+        var ladder = arg0.interactableObject.transform.gameObject;
+        var rb = ladder.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
     }
 }
