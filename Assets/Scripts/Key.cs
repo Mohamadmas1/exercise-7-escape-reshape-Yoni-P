@@ -55,13 +55,14 @@ public class Key : MonoBehaviour
     private IEnumerator OnKeyCollectedCoroutine()
     {
         Debug.Log("Teleporting player to " + teleportTarget.position);
-        blackScreen.alpha = 1.0f;
+        
         var characterController = player.GetComponent<CharacterController>();
         characterController.enabled = false;
         player.transform.position = teleportTarget.position;
         teleportTarget.gameObject.SetActive(false);
         characterController.enabled = true;
-        yield return new WaitForSeconds(1.0f);
+        blackScreen.DOFade(1.0f, 0.5f);
+        yield return new WaitForSeconds(1.5f);
         blackScreen.DOFade(0.0f, 1.0f);
         
         globalLight.SetActive(true);
