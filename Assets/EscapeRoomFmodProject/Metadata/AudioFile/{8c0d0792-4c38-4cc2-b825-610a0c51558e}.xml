@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8c0d0792-4c38-4cc2-b825-610a0c51558e}">
+		<property name="assetPath">
+			<value>WaterSounds/Ambiance/underwater_ambience_rumbling_1.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>347.49599999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f0a519ff-cc6b-4293-83b0-62ec3439362a}</destination>
+		</relationship>
+	</object>
+</objects>

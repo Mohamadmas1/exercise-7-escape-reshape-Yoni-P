@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b204cea3-a2f4-4521-ae30-09a9ace10e80}">
+		<property name="assetPath">
+			<value>WaterSounds/Bubbles/zapsplat_nature_water_underwater_bubble_rising_to_surface_008_75643.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.2160000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f0a519ff-cc6b-4293-83b0-62ec3439362a}</destination>
+		</relationship>
+	</object>
+</objects>

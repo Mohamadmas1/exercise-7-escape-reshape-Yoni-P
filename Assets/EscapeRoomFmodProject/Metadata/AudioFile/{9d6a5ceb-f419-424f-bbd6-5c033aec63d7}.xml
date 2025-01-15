@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9d6a5ceb-f419-424f-bbd6-5c033aec63d7}">
+		<property name="assetPath">
+			<value>WaterSounds/Bubbles/zapsplat_nature_water_underwater_sudden_movement_swish_bubbles_006_96986.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.6720000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f0a519ff-cc6b-4293-83b0-62ec3439362a}</destination>
+		</relationship>
+	</object>
+</objects>

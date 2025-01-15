@@ -14174,6 +14174,55 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &1402295749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448686269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1437062069
+      Data2: 1128744736
+      Data3: 499927472
+      Data4: 774292491
+    Path: event:/Ambiance/UnderwaterAmbiance
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1402295750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448686269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - Ambiance
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1412865133
 GameObject:
   m_ObjectHideFlags: 0
@@ -25154,6 +25203,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1402295748}
+    - targetCorrespondingSourceObject: {fileID: 6567095509552978987, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402295750}
+    - targetCorrespondingSourceObject: {fileID: 6567095509552978987, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402295749}
     - targetCorrespondingSourceObject: {fileID: 3658195717659182063, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       insertIndex: -1
