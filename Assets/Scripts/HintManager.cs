@@ -18,7 +18,6 @@ public class HintManager : MonoBehaviour
     private void Update()
     {
         timeSinceLastHint += Time.deltaTime;
-        Debug.Log("Time since last hint: " + timeSinceLastHint);
         if (timeSinceLastHint >= timeForNextHint)
         {
             timeSinceLastHint = 0;

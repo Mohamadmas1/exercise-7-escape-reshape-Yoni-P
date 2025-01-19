@@ -403,8 +403,8 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Ambiance
   - Master
+  - Ambiance
   Banks:
   - SFX
   BanksToLoad: []

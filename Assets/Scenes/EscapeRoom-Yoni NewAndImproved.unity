@@ -10430,6 +10430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5551014577142218206, guid: 98338fe72bad25f4a9e4f73d701311f5,
         type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.03300911
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551014577142218206, guid: 98338fe72bad25f4a9e4f73d701311f5,
+        type: 3}
       propertyPath: m_LODs.Array.data[1].renderers.Array.data[0].renderer
       value: 
       objectReference: {fileID: 0}
@@ -14231,6 +14236,51 @@ MonoBehaviour:
   - Ambiance
   CollisionTag: 
   PreloadSamples: 0
+--- !u!114 &1402295753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448686269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1437062069
+      Data2: 1128744736
+      Data3: 499927472
+      Data4: 774292491
+    Path: event:/Ambiance/UnderwaterMovement
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1402295754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448686269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111b40ab7d8e6714285d91977ad1afff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 1402295748}
+  movementSoundEmitter: {fileID: 1402295753}
 --- !u!1 &1412865133
 GameObject:
   m_ObjectHideFlags: 0
@@ -25198,6 +25248,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1402295749}
+    - targetCorrespondingSourceObject: {fileID: 6567095509552978987, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402295753}
+    - targetCorrespondingSourceObject: {fileID: 6567095509552978987, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402295754}
     - targetCorrespondingSourceObject: {fileID: 3658195717659182063, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       insertIndex: -1
