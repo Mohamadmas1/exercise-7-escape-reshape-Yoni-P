@@ -31,11 +31,12 @@ public class TeleportOnEnter : MonoBehaviour
     private IEnumerator TeleportCoroutine(GameObject other)
     {
         blackScreen.DOFade(1.0f, 0.5f);
+        yield return new WaitForSeconds(0.5f);
         var characterController = other.GetComponent<CharacterController>();
         characterController.enabled = false;
         other.transform.position = teleportTarget.position;
         characterController.enabled = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(4);
         blackScreen.DOFade(0.0f, 1.0f);
     }
 }

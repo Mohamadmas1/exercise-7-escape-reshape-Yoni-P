@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{199673ec-4cea-4823-a950-ad20d66df7fd}">
+		<property name="name">
+			<value>SharkTask</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3f9dfbdf-6894-42a3-9ef6-4b766bb4e3d6}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -16,6 +17,8 @@ public class ChestLockController : MonoBehaviour
     
     [SerializeField] private XRBaseInteractable ladderInteractable;
     [SerializeField] private MissionData chestHints;     
+    
+    [SerializeField] private StudioEventEmitter chestOpenSound;
     
     private int openProperty = Animator.StringToHash("Open");
     private int closeProperty = Animator.StringToHash("Close");
@@ -107,6 +110,9 @@ public class ChestLockController : MonoBehaviour
                 socketInteractor.socketActive = false;
                 socketInteractor.GetOldestInteractableHovered().transform.GetComponent<XRBaseInteractable>().enabled = false;
                 ladderInteractable.enabled = true;
+                
+                chestOpenSound.Play();
+                
                 if (chestHints != null)
                 {
                     chestHints.Solved = true;

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d687c864-5063-4ba7-9273-efe3452ec14f}">
+		<property name="name">
+			<value>CaveDistance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{f383280c-42c9-40de-8a19-e554dc910f2e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9e7ad172-5e47-442d-bba6-1bd307bc0751}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9e7ad172-5e47-442d-bba6-1bd307bc0751}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.5899999737739563</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

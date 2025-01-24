@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class LargeRockController : MonoBehaviour
@@ -8,7 +9,7 @@ public class LargeRockController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private int life;
     [SerializeField] private MissionData hammerHints;     
-
+    [SerializeField] private StudioEventEmitter hammerSound;
     
     private int hitProperty = Animator.StringToHash("Hit");
     private int lifeProperty = Animator.StringToHash("Life");
@@ -23,6 +24,8 @@ public class LargeRockController : MonoBehaviour
     public void Hit()
     {
         if (!_canBeHit) return;
+        
+        hammerSound.Play();
         
         life--;
         if (life==0)

@@ -21,7 +21,6 @@ public class MovementSound : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(characterController.velocity.magnitude);
         // movementSoundEmitter.SetParameter("Speed", characterController.velocity.magnitude);
         // Debug.Log(movementSoundEmitter.Params[0].Name + " " + movementSoundEmitter.Params[0].Value);
         // Debug.Log(movementSoundEmitter.Params);

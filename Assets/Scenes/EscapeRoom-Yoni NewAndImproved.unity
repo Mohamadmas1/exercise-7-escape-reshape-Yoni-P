@@ -7762,6 +7762,8 @@ GameObject:
   - component: {fileID: 850076725}
   - component: {fileID: 850076728}
   - component: {fileID: 850076727}
+  - component: {fileID: 850076729}
+  - component: {fileID: 850076730}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -7871,10 +7873,57 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.35
   m_Height: 2.34
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &850076729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850076724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Parameter: CaveDistance
+  TriggerEvent: 3
+  Value: 0
+--- !u!114 &850076730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850076724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -635925711
+      Data2: 1233499381
+      Data3: -234682712
+      Data4: -2067367521
+    Path: event:/SFX/CaveTask/FallAndHitGround
+  Event: 
+  EventPlayTrigger: 3
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &856490861
 GameObject:
   m_ObjectHideFlags: 0
@@ -14281,6 +14330,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 1402295748}
   movementSoundEmitter: {fileID: 1402295753}
+--- !u!114 &1402295757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448686269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 52791733
+      Data2: 1215324867
+      Data3: 296499645
+      Data4: 110651422
+    Path: event:/Ambiance/CaveAmbiance
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1412865133
 GameObject:
   m_ObjectHideFlags: 0
@@ -14313,6 +14393,43 @@ Transform:
   - {fileID: 693199415}
   m_Father: {fileID: 1589615212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1419583420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667329399760833504, guid: 6e6cec892ed3c4148aaa0aaf01212368,
+    type: 3}
+  m_PrefabInstance: {fileID: 6752063764172268420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1419583425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419583420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1636161716
+      Data2: 1326412930
+      Data3: -765718111
+      Data4: -342520308
+    Path: event:/SFX/ChestOpen
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1419782531
 GameObject:
   m_ObjectHideFlags: 0
@@ -14479,6 +14596,74 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1457288200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2366960358646120069, guid: 97555a69e75ad874b9444f3a432e21a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7754387703368857878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1457288205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457288200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1525051623
+      Data2: 1201576179
+      Data3: -1539738719
+      Data4: -1343106096
+    Path: event:/SFX/SharkTask/SharkImpact
+  Event: 
+  EventPlayTrigger: 7
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1457288206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457288200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1125272364
+      Data2: 1203862336
+      Data3: -1361352052
+      Data4: 384860254
+    Path: event:/Ambiance/ItemUnderwaterMovement
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1460745739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17789,6 +17974,43 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1735659180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7922107985503340575, guid: b8c9e66f47e6ce342b515a7ab76310b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3111857228409363057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1735659185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735659180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1952887199
+      Data2: 1128711269
+      Data3: 951277704
+      Data4: 808920091
+    Path: event:/SFX/SharkTask/SledgehammerImpact
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1742835506
 GameObject:
   m_ObjectHideFlags: 0
@@ -25173,7 +25395,7 @@ PrefabInstance:
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.77
+      value: -8.19
       objectReference: {fileID: 0}
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
@@ -25183,7 +25405,7 @@ PrefabInstance:
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.89
+      value: -4.73
       objectReference: {fileID: 0}
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
@@ -25288,6 +25510,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1402295754}
+    - targetCorrespondingSourceObject: {fileID: 6567095509552978987, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402295757}
     - targetCorrespondingSourceObject: {fileID: 3658195717659182063, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       insertIndex: -1
@@ -25431,6 +25657,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 377085792}
+    - targetCorrespondingSourceObject: {fileID: 7922107985503340575, guid: b8c9e66f47e6ce342b515a7ab76310b5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1735659185}
   m_SourcePrefab: {fileID: 100100000, guid: b8c9e66f47e6ce342b515a7ab76310b5, type: 3}
 --- !u!4 &3112801150873241977
 Transform:
@@ -25633,6 +25863,11 @@ PrefabInstance:
       propertyPath: hammerHints
       value: 
       objectReference: {fileID: 928884085}
+    - target: {fileID: 3493806612449148239, guid: ba67c85ca5435e146a7eadbb593449cd,
+        type: 3}
+      propertyPath: hammerSound
+      value: 
+      objectReference: {fileID: 1735659185}
     - target: {fileID: 4925570263069606670, guid: ba67c85ca5435e146a7eadbb593449cd,
         type: 3}
       propertyPath: m_IsKinematic
@@ -25872,6 +26107,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7251813217929339202}
+    - targetCorrespondingSourceObject: {fileID: 6376500943956990810, guid: b7734632280c98740b62feba33f8cafd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7251813217929339203}
+    - targetCorrespondingSourceObject: {fileID: 6376500943956990810, guid: b7734632280c98740b62feba33f8cafd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7251813217929339209}
   m_SourcePrefab: {fileID: 100100000, guid: b7734632280c98740b62feba33f8cafd, type: 3}
 --- !u!23 &4410803654119618783
 MeshRenderer:
@@ -26818,6 +27061,11 @@ PrefabInstance:
       objectReference: {fileID: 1589615211}
     - target: {fileID: 5317358968260523726, guid: 6e6cec892ed3c4148aaa0aaf01212368,
         type: 3}
+      propertyPath: chestOpenSound
+      value: 
+      objectReference: {fileID: 1419583425}
+    - target: {fileID: 5317358968260523726, guid: 6e6cec892ed3c4148aaa0aaf01212368,
+        type: 3}
       propertyPath: ladderInteractable
       value: 
       objectReference: {fileID: 2074458998}
@@ -26834,7 +27082,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2074458996}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8667329399760833504, guid: 6e6cec892ed3c4148aaa0aaf01212368,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1419583425}
   m_SourcePrefab: {fileID: 100100000, guid: 6e6cec892ed3c4148aaa0aaf01212368, type: 3}
 --- !u!4 &6767762502297190636
 Transform:
@@ -27207,6 +27459,55 @@ MonoBehaviour:
   player: {fileID: 448686269}
   globalLight: {fileID: 410087039}
   blackScreen: {fileID: 283271725}
+  globalParameterTrigger: {fileID: 7251813217929339203}
+  teleportSound: {fileID: 7251813217929339209}
+--- !u!114 &7251813217929339203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361218522103051302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: CaveDistance
+  TriggerEvent: 0
+  Value: 1
+--- !u!114 &7251813217929339209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361218522103051302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1567863281
+      Data2: 1185114946
+      Data3: 1654071743
+      Data4: 365583570
+    Path: event:/SFX/CaveTask/Teleport
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &7261547387082767768
 Transform:
   m_ObjectHideFlags: 0
@@ -27532,37 +27833,37 @@ PrefabInstance:
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2378712
+      value: -14.32
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2664747
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.643003
+      value: -14.12
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.15563534
+      value: 0.14802241
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.025113052
+      value: 0.69003433
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7880734
+      value: 0.6921419
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5950523
+      value: 0.15126689
       objectReference: {fileID: 0}
     - target: {fileID: 167381164277566621, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
@@ -27592,7 +27893,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2366960358646120069, guid: 97555a69e75ad874b9444f3a432e21a3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1457288206}
+    - targetCorrespondingSourceObject: {fileID: 2366960358646120069, guid: 97555a69e75ad874b9444f3a432e21a3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1457288205}
   m_SourcePrefab: {fileID: 100100000, guid: 97555a69e75ad874b9444f3a432e21a3, type: 3}
 --- !u!4 &7863353755522429671
 Transform:
