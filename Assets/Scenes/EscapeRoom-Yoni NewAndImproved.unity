@@ -14229,13 +14229,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 3
+  m_Height: 2
   m_Radius: 0.32
-  m_SlopeLimit: 45
+  m_SlopeLimit: 0
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1402295749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14629,37 +14629,6 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &1457288206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457288200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1125272364
-      Data2: 1203862336
-      Data3: -1361352052
-      Data4: 384860254
-    Path: event:/Ambiance/ItemUnderwaterMovement
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 1
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -22575,6 +22544,43 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1994882012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4609855332241074426, guid: 97555a69e75ad874b9444f3a432e21a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7754387703368857878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994882014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994882012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1125272364
+      Data2: 1203862336
+      Data3: -1361352052
+      Data4: 384860254
+    Path: event:/Ambiance/ItemUnderwaterMovement
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &2006103439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25395,7 +25401,7 @@ PrefabInstance:
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.19
+      value: 16.18
       objectReference: {fileID: 0}
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
@@ -25405,7 +25411,7 @@ PrefabInstance:
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.73
+      value: -5.82
       objectReference: {fileID: 0}
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
@@ -25440,6 +25446,21 @@ PrefabInstance:
     - target: {fileID: 2039220574721337775, guid: 69d7766b121707d4e84ba6bbfa16c870,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845854012518204371, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826461486874543742, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      propertyPath: m_CameraYOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826461486874543742, guid: 69d7766b121707d4e84ba6bbfa16c870,
+        type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4168618135868345493, guid: 69d7766b121707d4e84ba6bbfa16c870,
@@ -25538,7 +25559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 2844856754133014031}
 --- !u!23 &3030368120953252226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27880,6 +27901,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3910386239393665065, guid: 97555a69e75ad874b9444f3a432e21a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8277285270418546620, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       propertyPath: m_Target
@@ -27897,11 +27923,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2366960358646120069, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1457288206}
-    - targetCorrespondingSourceObject: {fileID: 2366960358646120069, guid: 97555a69e75ad874b9444f3a432e21a3,
+      addedObject: {fileID: 1457288205}
+    - targetCorrespondingSourceObject: {fileID: 4609855332241074426, guid: 97555a69e75ad874b9444f3a432e21a3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1457288205}
+      addedObject: {fileID: 1994882014}
   m_SourcePrefab: {fileID: 100100000, guid: 97555a69e75ad874b9444f3a432e21a3, type: 3}
 --- !u!4 &7863353755522429671
 Transform:

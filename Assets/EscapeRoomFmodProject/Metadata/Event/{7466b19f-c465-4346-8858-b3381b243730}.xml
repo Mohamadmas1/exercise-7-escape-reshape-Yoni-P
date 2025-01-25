@@ -5,7 +5,7 @@
 			<value>SledgehammerImpact</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{199673ec-4cea-4823-a950-ad20d66df7fd}</destination>
@@ -127,6 +127,7 @@
 		<relationship name="effects">
 			<destination>{39bd749a-08bd-4617-8f4f-523c10f49075}</destination>
 			<destination>{6c3dabd1-28aa-45fa-a827-2685b0cba15b}</destination>
+			<destination>{223474fa-a3fa-4d9d-a175-9657eb54268b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{74ec2d04-8830-4f4b-a479-00a93abc546c}" />
@@ -140,4 +141,5 @@
 			<value>0.299999982</value>
 		</property>
 	</object>
+	<object class="SpatialiserEffect" id="{223474fa-a3fa-4d9d-a175-9657eb54268b}" />
 </objects>
