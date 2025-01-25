@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -8,6 +9,7 @@ public class Throw : MonoBehaviour
     [SerializeField] private Queue<Vector3> positionHistory = new();
     [SerializeField] private int historySize = 10;
     public float boost = 2f;
+    [SerializeField] private StudioEventEmitter hitEmitter;
 
     private void Update()
     {
@@ -45,5 +47,11 @@ public class Throw : MonoBehaviour
 
         // clear the position history
         positionHistory.Clear();
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (Time.timeSinceLevelLoad < 0.1f) return;
+        hitEmitter.Play();
     }
 }

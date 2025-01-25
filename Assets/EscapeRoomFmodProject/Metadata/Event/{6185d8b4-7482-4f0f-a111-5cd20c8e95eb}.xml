@@ -5,7 +5,7 @@
 			<value>ChestOpen</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3f9dfbdf-6894-42a3-9ef6-4b766bb4e3d6}</destination>
@@ -132,6 +132,7 @@
 	<object class="MixerBusEffectChain" id="{d98f13f8-18bb-412e-b40a-fda95303f830}">
 		<relationship name="effects">
 			<destination>{e4f622de-a889-4cba-8393-a6605044aebe}</destination>
+			<destination>{a6959cc9-c3bb-419c-bc16-7fa47e87c7c3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{699b79b0-6cd3-4517-9aa4-2268ea29b8da}" />
@@ -166,6 +167,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{11834a1d-410e-4e1e-a752-06045c8b2688}" />
 	<object class="MixerBusFader" id="{e4f622de-a889-4cba-8393-a6605044aebe}" />
+	<object class="SpatialiserEffect" id="{a6959cc9-c3bb-419c-bc16-7fa47e87c7c3}" />
 	<object class="AutomationPoint" id="{04f96a48-8808-4502-a552-0574173dc498}">
 		<property name="position">
 			<value>0.46000000000000002</value>

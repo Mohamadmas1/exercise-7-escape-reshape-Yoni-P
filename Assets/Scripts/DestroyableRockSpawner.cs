@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class DestroyableRockSpawner : MonoBehaviour
@@ -27,12 +28,13 @@ public class DestroyableRockSpawner : MonoBehaviour
         }
     }
 
-    public void TryDestroyRock(Collision collision, GameObject destroyableRock)
+    public void TryDestroyRock(Collision collision, GameObject destroyableRock, StudioEventEmitter destroyRockEmitter)
     {
         if (collision.gameObject.CompareTag("RockToThrow"))
         {
             Destroy(destroyableRock);
             Destroy(collision.gameObject);
+            destroyRockEmitter.Play();
 
             spawnTimer = spawnTime;
         }

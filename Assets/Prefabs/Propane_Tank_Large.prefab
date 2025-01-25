@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4709195342975445234}
   - component: {fileID: 613182331901198803}
   - component: {fileID: 1237828307602715302}
+  - component: {fileID: -8795397120056626201}
   m_Layer: 0
   m_Name: Propane_Tank_Large
   m_TagString: Untagged
@@ -300,3 +301,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa06698ea7287e04bb8bdb8b0f73f052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefabs: []
+  explosionForce: 500
+  explosionRadius: 5
+  explosiveEmitter: {fileID: -8795397120056626201}
+--- !u!114 &-8795397120056626201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -101414176
+      Data2: 1203969871
+      Data3: 29104802
+      Data4: -627311252
+    Path: event:/large-underwater-explosion-190270
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

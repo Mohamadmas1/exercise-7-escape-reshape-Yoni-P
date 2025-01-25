@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{dde92422-50d9-4d2a-abcb-af2e48979284}">
+		<property name="assetPath">
+			<value>stones-falling-6375.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.2720000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f0a519ff-cc6b-4293-83b0-62ec3439362a}</destination>
+		</relationship>
+	</object>
+</objects>

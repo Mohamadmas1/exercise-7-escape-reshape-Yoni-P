@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class Explosive : MonoBehaviour
@@ -7,6 +8,7 @@ public class Explosive : MonoBehaviour
     [SerializeField] private GameObject[] explosionPrefabs;
     [SerializeField] private float explosionForce = 500f;
     [SerializeField] private float explosionRadius = 5f;
+    [SerializeField] private StudioEventEmitter explosiveEmitter;
     private bool explodeed = false;
 
     public void Explode()
@@ -36,6 +38,7 @@ public class Explosive : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
             }
         }
+        explosiveEmitter.Play();
     }
 
     public void ExplosionDamage()

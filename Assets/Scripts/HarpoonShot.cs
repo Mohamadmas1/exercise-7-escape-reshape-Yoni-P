@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -10,6 +11,8 @@ public class HarpoonShot : MonoBehaviour
     [SerializeField] private float shotForce = 10f;
     [SerializeField] private GameObject socketInteractor;
 
+    [SerializeField] private StudioEventEmitter gunShotEmitter;
+    [SerializeField] private StudioEventEmitter gunReloadEmitter;
     [SerializeField] private float shotCooldown = 1f;
     private float shotTimer = 0f;
 
@@ -34,6 +37,7 @@ public class HarpoonShot : MonoBehaviour
     {
         harpoon = args.interactableObject.transform.GetComponent<Rigidbody>();
         isLoaded = true;
+        gunReloadEmitter.Play();
     }
 
     public void OnShoot()
@@ -48,5 +52,6 @@ public class HarpoonShot : MonoBehaviour
         // shoot the harpoon
         harpoon.AddForce(transform.forward * shotForce, ForceMode.Impulse);
         isLoaded = false;
+        gunShotEmitter.Play();
     }
 }
