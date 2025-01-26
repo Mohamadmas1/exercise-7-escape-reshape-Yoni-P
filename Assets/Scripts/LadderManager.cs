@@ -6,6 +6,8 @@ public class LadderManager : MonoBehaviour
 {
     [SerializeField] private XRSocketInteractor ladderSocketInteractor1;
     [SerializeField] private XRSocketInteractor ladderSocketInteractor2;
+    
+    public static Action OnAllLaddersPlaced;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class LadderManager : MonoBehaviour
     private void OnLadder2Placed(SelectEnterEventArgs arg0)
     {
         HandleLadderPlacement(ladderSocketInteractor2, null, arg0);
+        OnAllLaddersPlaced?.Invoke();
     }
 
     private void HandleLadderPlacement(XRSocketInteractor currentSocket, XRSocketInteractor nextSocket, SelectEnterEventArgs arg0)
