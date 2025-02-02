@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class DestroyableRockSpawner : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DestroyableRockSpawner : MonoBehaviour
     [SerializeField] private GameObject door;
     [SerializeField] private Transform originalDoorTransform;
     [SerializeField] private GameObject rockToThrow;
+    [SerializeField] private XRBaseInteractable hiddenGasCan;
 
     [SerializeField] private float spawnTime = 1.0f;
     private float spawnTimer = 0.0f;
@@ -37,6 +39,7 @@ public class DestroyableRockSpawner : MonoBehaviour
             destroyRockEmitter.Play();
 
             spawnTimer = spawnTime;
+            hiddenGasCan.enabled = true;
         }
     }
 

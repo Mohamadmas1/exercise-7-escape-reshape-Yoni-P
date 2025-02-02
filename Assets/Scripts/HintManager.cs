@@ -33,6 +33,7 @@ public class HintManager : MonoBehaviour
         progress += 1f;
         progressParameterTrigger.Value = progress;
         progressParameterTrigger.TriggerParameters();
+        timeSinceLastHint = 0;
     }
 
     private void Update()
@@ -47,10 +48,15 @@ public class HintManager : MonoBehaviour
 
     private void ShowNextHint()
     {
-        if (currentMissionIndex >= missionData.Length)
+        while (missionData[currentMissionIndex].Solved)
         {
-            Debug.Log("All hints shown");
-            return;
+            missionData[currentMissionIndex].ShowHint();
+            currentMissionIndex++;
+            if (currentMissionIndex >= missionData.Length)
+            {
+                Debug.Log("All hints shown");
+                return;
+            }
         }
         missionData[currentMissionIndex].ShowHint();
         currentMissionIndex++;

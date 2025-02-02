@@ -6,6 +6,7 @@ public class LadderManager : MonoBehaviour
 {
     [SerializeField] private XRSocketInteractor ladderSocketInteractor1;
     [SerializeField] private XRSocketInteractor ladderSocketInteractor2;
+    [SerializeField] private InteractionLayerMask placedLadderLayerMask;
     
     public static Action OnAllLaddersPlaced;
 
@@ -20,10 +21,11 @@ public class LadderManager : MonoBehaviour
         ladderSocketInteractor1.selectEntered.AddListener(OnLadder1Placed);
         ladderSocketInteractor2.selectEntered.AddListener(OnLadder2Placed);
     }
-    
+
     private void OnDisable()
     {
         ladderSocketInteractor1.selectEntered.RemoveListener(OnLadder1Placed);
+            
         ladderSocketInteractor2.selectEntered.RemoveListener(OnLadder2Placed);
     }
 
@@ -42,23 +44,24 @@ public class LadderManager : MonoBehaviour
     {
         
         var ladder = arg0.interactableObject.transform.gameObject;
-
         // Align the ladder with the socket
-        ladder.transform.position = currentSocket.attachTransform.position;
-        ladder.transform.rotation = currentSocket.attachTransform.rotation;
+        // ladder.transform.position = currentSocket.attachTransform.position;
+        // ladder.transform.rotation = currentSocket.attachTransform.rotation;
 
         // Disable interaction layers for the ladder to prevent further grabbing
         var grabInteractable = ladder.GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
-            grabInteractable.interactionLayers = LayerMask.GetMask("Nothing");
+            grabInteractable.interactionLayers = placedLadderLayerMask;
+        
+        currentSocket.interactionLayers = placedLadderLayerMask;
 
         // Enable climb interaction
-        var climbInteractable = ladder.GetComponent<ClimbInteractable>();
-        if (climbInteractable != null)
-            climbInteractable.enabled = true;
+        // var climbInteractable = ladder.GetComponent<ClimbInteractable>();
+        // if (climbInteractable != null)
+        //     climbInteractable.enabled = true;
         
         // Disable the current socket
-        currentSocket.socketActive = false;
+        // currentSocket.socketActive = false;
         
         // Enable the next socket if available
         if (nextSocket != null)

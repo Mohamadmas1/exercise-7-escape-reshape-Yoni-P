@@ -25,7 +25,7 @@ public class LadderClimbingAniamtion : MonoBehaviour
     {
         Debug.Log("Playing camera animation");
         
-        Camera.main.GetComponent<TrackedPoseDriver>().enabled = false;
+        Camera.main.GetComponent<TrackedPoseDriver>().trackingType = TrackedPoseDriver.TrackingType.RotationOnly;
         ladderCamera.Priority = 20;
         playerAnimator.SetTrigger("Climb");
     }

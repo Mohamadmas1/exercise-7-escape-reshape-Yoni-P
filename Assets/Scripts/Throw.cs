@@ -52,6 +52,7 @@ public class Throw : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         if (Time.timeSinceLevelLoad < 0.1f) return;
-        hitEmitter.Play();
+        if (hitEmitter != null)
+            hitEmitter.Play();
     }
 }
